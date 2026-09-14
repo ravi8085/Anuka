@@ -46,7 +46,7 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight text-brand-charcoal leading-[1.08]">
-              Build. Innovate. Transform.
+              Where Every Solution Begins with AI
             </h1>
             <p className="text-lg lg:text-xl text-brand-textMuted max-w-2xl font-normal leading-relaxed">
               We design and develop intelligent software products and digital solutions that help businesses operate smarter, scale faster, and innovate continuously.
