@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
   return (
     <div className="space-y-24 pb-20">
       {/* Hero Section */}
-      <section className="pt-20 lg:pt-28">
+      <section className="pt-20 lg:pt-10">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 space-y-6">
             <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight text-brand-charcoal leading-[1.08]">
@@ -52,14 +52,14 @@ export const Home: React.FC = () => {
               We design and develop intelligent software products and digital solutions that help businesses operate smarter, scale faster, and innovate continuously.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Link 
-                to="/solutions" 
+              <Link
+                to="/solutions"
                 className="bg-brand-charcoal text-white text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-black transition-all inline-flex items-center gap-2"
               >
                 Explore Our Solutions <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white border border-brand-border text-brand-charcoal text-sm font-semibold px-6 py-3.5 rounded-full hover:bg-brand-subtle transition-all"
               >
                 Talk to Our Experts
@@ -102,8 +102,8 @@ export const Home: React.FC = () => {
           {services.map((svc, idx) => {
             const Icon = svc.icon;
             return (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="border border-brand-border p-6 rounded-lg bg-white flex flex-col justify-between hover:border-slate-400 hover:shadow-md transition-all group"
               >
                 <div>
@@ -166,14 +166,14 @@ export const Home: React.FC = () => {
               <div className="text-xs text-slate-500">{testimonials[activeTestimonial].role}</div>
             </div>
             <div className="flex gap-2">
-              <button 
+              <button
                 onClick={() => setActiveTestimonial((prev: number) => (prev === 0 ? testimonials.length - 1 : prev - 1))}
                 className="w-9 h-9 border border-brand-border rounded-full flex items-center justify-center hover:bg-slate-100"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTestimonial((prev: number) => (prev === testimonials.length - 1 ? 0 : prev + 1))}
                 className="w-9 h-9 border border-brand-border rounded-full flex items-center justify-center hover:bg-slate-100"
                 aria-label="Next testimonial"
