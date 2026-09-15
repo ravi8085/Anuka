@@ -5,6 +5,7 @@ export const Industries: React.FC = () => {
   const industries = [
     {
       name: "Banking & Financial Services",
+      image: "/images/industries/banking.jpg",
       overview: "Regulatory-compliant financial technology systems built for high-frequency operations.",
       challenges: "Complex regulatory frameworks, legacy mainframes, real-time fraud threats.",
       solutions: "Distributed ledger networks, modern transactional APIs, automated compliance audits.",
@@ -12,6 +13,7 @@ export const Industries: React.FC = () => {
     },
     {
       name: "Insurance",
+      image: "/images/industries/insurance.jpg",
       overview: "Streamlined claims processing and algorithmic risk assessment architectures.",
       challenges: "Lengthy claims lifecycles, manual underwriting bottlenecks, disparate data records.",
       solutions: "AI-based claims document validation, algorithmic underwriting engines.",
@@ -19,6 +21,7 @@ export const Industries: React.FC = () => {
     },
     {
       name: "Healthcare",
+      image: "/images/industries/healthcare.jpg",
       overview: "HIPAA-compliant software ecosystems connecting providers, clinics, and diagnostic platforms.",
       challenges: "Sensitive data protection, siloed EHR platforms, critical operational stakes.",
       solutions: "Interoperable FHIR/HL7 data hubs, secure diagnostic telemetric pipelines.",
@@ -26,6 +29,7 @@ export const Industries: React.FC = () => {
     },
     {
       name: "Retail",
+      image: "/images/industries/retail.jpg",
       overview: "Unified omnichannel inventory, dynamic point-of-sale, and e-commerce platforms.",
       challenges: "Omnichannel inventory synchronization, spiky web traffic, order drop-offs.",
       solutions: "Headless microservices, real-time inventory event buses, high-concurrency checkout.",
@@ -33,6 +37,7 @@ export const Industries: React.FC = () => {
     },
     {
       name: "Manufacturing",
+      image: "/images/industries/manufacturing.jpg",
       overview: "Smart factory integrations, industrial IoT, and real-time equipment tracking.",
       challenges: "Unscheduled line shutdowns, distributed factory networks, legacy machinery.",
       solutions: "Edge-based sensor telemetry, predictive component analytics, SCADA integration.",
@@ -40,6 +45,7 @@ export const Industries: React.FC = () => {
     },
     {
       name: "Energy & Utilities",
+      image: "/images/industries/energy.jpg",
       overview: "Smart grid load management, renewable infrastructure oversight, and consumption monitoring.",
       challenges: "Grid fluctuation management, distributed renewable nodes, aging infrastructure.",
       solutions: "Real-time load balancing systems, intelligent smart-meter telemetry engines.",
@@ -80,8 +86,15 @@ export const Industries: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Industry Image Block */}
             <div className="lg:col-span-5">
-              <ImagePlaceholder label={`INDUSTRY: ${ind.name.toUpperCase()}`} aspectRatio="aspect-video" />
+              <ImagePlaceholder 
+                label={`INDUSTRY: ${ind.name.toUpperCase()}`} 
+                src={ind.image} 
+                alt={ind.name} 
+                aspectRatio="aspect-video" 
+              />
             </div>
           </div>
         ))}
